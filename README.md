@@ -49,3 +49,7 @@ Redux
    JWT Authentication Middleware
    Authorization Middleware
    Controllers
+
+TO DO
+
+1. Would have loved to expand on the test cases, especially on the ui side. Perhaos even story book. Due to lack of time have only done basic test cases to demosntrate the flow.
