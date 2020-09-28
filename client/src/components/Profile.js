@@ -2,6 +2,7 @@ import React from "react";
 import { Redirect } from "react-router-dom";
 import { useSelector } from "react-redux";
 
+//Profile component displays user information after the login action is successful.
 const Profile = () => {
   const { user: currentUser } = useSelector((state) => state.auth);
 

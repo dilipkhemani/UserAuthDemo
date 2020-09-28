@@ -7,9 +7,9 @@ const Role = db.role;
 var jwt = require("jsonwebtoken");
 var bcrypt = require("bcryptjs");
 
+// create new User in database (role is user if not specifying role)
 exports.signup = (req, res) => {
   //if admin key has been provided , it is an admin user. First make sure we are verifying the key before proceeding
-
   if (config.secret !== req.body.adminkey && req.body.role === "admin") {
     res.status(500).send({ message: "Invalid Admin key provided." });
     return;
@@ -77,6 +77,10 @@ exports.signup = (req, res) => {
   });
 };
 
+//find username of the request in database, if it exists
+//compare password with password in database using bcrypt, if it is correct
+//generate a token using jsonwebtoken
+//return user information & access Token
 exports.signin = (req, res) => {
   User.findOne({
     username: req.body.username,

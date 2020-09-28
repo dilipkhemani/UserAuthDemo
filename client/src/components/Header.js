@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../actions/auth";
 import { Link } from "react-router-dom";
 
+//Depending on User’s roles (admin, user) the Navigation Bar changes its items automatically.
 const Header = () => {
   const [showAdminBoard, setShowAdminBoard] = useState(false);
 

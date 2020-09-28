@@ -8,6 +8,8 @@ import { isValid as ssnValidator } from "ssn-validator";
 
 import { register } from "../actions/auth";
 
+//Form data will be validated by front-end before being sent to back-end.
+//React Validations used by form
 const required = (value) => {
   if (!value) {
     return (
@@ -48,6 +50,10 @@ const vssn = (value) => {
   }
 };
 
+//Form data will be validated by front-end before being sent to back-end.
+//Form for data submission (with support of react-validation library).
+//Dispatch auth actions (login/register) to Redux Thunk Middleware
+//Thunk uses auth.service to call API.
 const Register = () => {
   const form = useRef();
   const checkBtn = useRef();
@@ -106,6 +112,7 @@ const Register = () => {
     setSuccessful(false);
     setLoading(true);
 
+    //method to check validation functions in validations.
     form.current.validateAll();
     console.log(form);
 

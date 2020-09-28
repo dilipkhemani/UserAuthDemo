@@ -9,6 +9,9 @@ import {
 
 import AuthService from "../services/auth.service";
 
+//This is creator for actions related to authentication.
+//Import AuthService to make asynchronous HTTP requests with trigger one or more dispatch in the result.
+//Return a Promise for Components using them.
 export const register = ({
   username,
   password,

@@ -12,6 +12,8 @@ import BoardAdmin from "../components/BoardAdmin";
 // Custom routers
 import ProtectedRoute from "./ProtectedRoute";
 
+//All routes defined here.
+//Protected Route setup for Admin Board.
 const URLRoutes = () => {
   const { user: currentUser } = useSelector((state) => state.auth);
 

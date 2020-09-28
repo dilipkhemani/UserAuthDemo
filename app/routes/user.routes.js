@@ -1,6 +1,7 @@
 const { authJwt } = require("../middlewares");
 const controller = require("../controllers/user.controller");
 
+//Routes for Authorization (accessing protected resources).
 module.exports = function (app) {
   app.use(function (req, res, next) {
     res.header(

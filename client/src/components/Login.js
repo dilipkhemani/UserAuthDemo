@@ -7,7 +7,8 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 
 import { login } from "../actions/auth";
-
+//Form data will be validated by front-end before being sent to back-end.
+//React Validations used by form
 const required = (value) => {
   if (!value) {
     return (
@@ -17,6 +18,11 @@ const required = (value) => {
     );
   }
 };
+
+//Form data will be validated by front-end before being sent to back-end.
+//Form for data submission (with support of react-validation library).
+//Dispatch auth actions (login/register) to Redux Thunk Middleware
+//Thunk uses auth.service to call API.
 
 const Login = (props) => {
   const form = useRef();

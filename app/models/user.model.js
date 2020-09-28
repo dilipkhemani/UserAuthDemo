@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+//Link user with Role.
 const User = mongoose.model(
   "User",
   new mongoose.Schema({

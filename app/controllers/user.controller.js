@@ -4,6 +4,8 @@ const { decrypt } = require("../utils/crypto");
 const User = db.user;
 const Role = db.role;
 
+//Access only for Admin users
+//Return list of all users with role user
 exports.adminBoard = (req, res) => {
   //We get only the columns were are interested in from Mongodb
   const usersProjection = {

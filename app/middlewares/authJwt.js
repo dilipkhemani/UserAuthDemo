@@ -4,6 +4,10 @@ const db = require("../models");
 const User = db.user;
 const Role = db.role;
 
+//Process Authentication & Authorization:
+
+//check if token is provided, legal or not.
+//We get token from x-access-token of HTTP headers, then use jsonwebtoken's verify() function
 verifyToken = (req, res, next) => {
   let token = req.headers["x-access-token"];
 
@@ -20,6 +24,7 @@ verifyToken = (req, res, next) => {
   });
 };
 
+//check if roles of the user contains required role or not
 isAdmin = (req, res, next) => {
   User.findById(req.userId).exec((err, user) => {
     if (err) {

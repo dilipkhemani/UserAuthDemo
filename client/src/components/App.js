@@ -15,6 +15,7 @@ const App = () => {
   const dispatch = useDispatch();
   const history = useHistory();
 
+  //History to be used by BrowserRouter. We listen to the history to change clear any message when location changes
   useEffect(() => {
     history.listen((location) => {
       dispatch(clearMessage()); // clear message when changing location

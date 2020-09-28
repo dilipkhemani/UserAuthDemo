@@ -3,6 +3,8 @@ import { BootstrapTable, TableHeaderColumn } from "react-bootstrap-table";
 
 import UserService from "../services/user.service";
 
+//BoardAdmin components will be displayed in navbar by state user.role.
+//use user.service to access protected resources from Web API.
 const BoardAdmin = () => {
   const [content, setContent] = useState("");
 

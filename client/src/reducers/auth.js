@@ -12,6 +12,7 @@ const initialState = user
   ? { isLoggedIn: true, user }
   : { isLoggedIn: false, user: null };
 
+//The Auth reducer will update the isLoggedIn and user state of the application.
 export default function (state = initialState, action) {
   const { type, payload } = action;
 

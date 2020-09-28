@@ -2,6 +2,7 @@ import { SET_MESSAGE, CLEAR_MESSAGE } from "../actions/type";
 
 const initialState = {};
 
+//Update message state when message action is dispatched from anywhere in the application.
 export default function (state = initialState, action) {
   const { type, payload } = action;
 

@@ -9,12 +9,14 @@ require("dotenv").config();
 const app = express();
 
 //ensure we only allow CORS from the client we are expecting
+//cors provides Express middleware to enable CORS
 const corsOptions = {
   origin: process.env.corsOrigin || "http://localhost:3000",
 };
 app.use(cors(corsOptions));
 
 //parse content-type - application/json requests
+//body-parser helps to parse the request and create the req.body object
 app.use(bodyParser.json());
 //parse content-type - applications/x-www-form-url encoded requests
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -67,6 +69,8 @@ function initial() {
 require("./app/routes/auth.routes")(app);
 require("./app/routes/user.routes")(app);
 
+//Below setupd done to enable client to be embedded in server.
+//Deployment done to Heroku
 // ... other app.use middleware
 app.use(express.static(path.join(__dirname, "client", "build")));
 

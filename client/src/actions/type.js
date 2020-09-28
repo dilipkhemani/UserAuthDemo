@@ -1,3 +1,4 @@
+//string constant that indicate the type of action being performed.
 export const REGISTER_SUCCESS = "REGISTER_SUCCESS";
 export const REGISTER_FAIL = "REGISTER_FAIL";
 export const SIGNUP_SUCCESS = "SIGNUP_SUCCESS";

@@ -2,6 +2,9 @@ import axios from "axios";
 
 const API_URL = "/api/auth/";
 
+//The service uses Axios for HTTP requests and Local Storage for user information & JWT.
+//It provides following important methods:
+
 const register = ({
   username,
   password,
